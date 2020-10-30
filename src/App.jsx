@@ -3,15 +3,17 @@ import { useDispatch, useSelector } from "react-redux";
 import CAN from "./config/casl/can";
 import { login, logout } from "./redux/auth/authActions";
 
-export default function App({ props }) {
+export default () => {
   const dispatch = useDispatch();
   const { auth } = useSelector((state) => state);
 
+  // rerender the component when `auth` changes
   useState(() => {}, [auth]);
 
   return (
     <React.Fragment>
       <h1>Welcome, {auth?.name || "Please Login!"}</h1>
+
       {CAN("add", "users") && (
         <button
           onClick={() => {
@@ -44,4 +46,4 @@ export default function App({ props }) {
       </div>
     </React.Fragment>
   );
-}
+};
