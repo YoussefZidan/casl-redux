@@ -1,5 +1,5 @@
 import { Ability, AbilityBuilder } from "@casl/ability";
-import { store } from "../../redux/storeConfig/store";
+import { store } from "../redux/storeConfig/store";
 
 const ability = new Ability();
 

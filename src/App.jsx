@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import CAN from "./config/casl/can";
+import CAN from "./casl/can";
 import { login, logout } from "./redux/auth/authActions";
 
 export default () => {
